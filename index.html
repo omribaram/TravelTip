@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <title>Traveltip</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="logo">TravelTip</div>
+      </header>
+      <section class="subheader">
+        <section class="loc-search">
+          <form onsubmit="onSearchLoc(event)" class="search-form">
+            <input type="search" name="search-term" placeholder="Search an address / place..." autocomplete="on" />
+            <button>Search</button>
+          </form>
+          <button onclick="onShowUserPos()">My Location</button>
+        </section>
+        <section class="curr-loc">
+          <span class="addrs"></span>
+          <button onclick="onCopyLoc()">Copy Location</button>
+        </section>
+      </section>
+      <section class="content-container">
+        <aside>
+          <section class="weather-container">
+            <div class="weather-preview"></div>
+          </section>
+          <section class="loc-container">
+            <div class="loc-list"></div>
+          </section>
+        </aside>
+        <main>
+          <section class="map-container"></section>
+        </main>
+      </section>
+    </div>
+    <div class="modal-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/app-controller.js"></script>
+  </body>
+</html>
